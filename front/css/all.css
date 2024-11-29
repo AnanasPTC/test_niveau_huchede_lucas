@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+nav {
+    background-color: #020215; 
+    color: white; 
+    padding: 1rem; 
+    text-align: center; 
+}
+
+.grille-head{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 5px;
+}
+
+.logo{
+    grid-column: 2;
+}
+
+.titre{
+    grid-column: 2/5;
+}
+
+.connexion{
+    grid-column: 12;
+}
+

@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulaire d'inscription</title>
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/form.css">
 </head>
 <body>
+    <div id="navbar"></div>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
     
+    <form class="grille-contenant">
+        <h1 class="element">Inscription</h1>
+        <!--username-->
+        <label for="username" class="element">pseudo:</label>
+        <input type="text" id="username" name="username" class="element" required>
+        
+        <!--email-->
+        <label for="email" class="element">email:</label>
+        <input type="text" id="email" name="email" class="element" required>
+
+        <!--password-->
+        <label for="password" class="element">mot de passe:</label>
+        <input type="text" id="password" name="password" class="element" required>
+
+        <button type="submit" class="element">S'inscrire</button>
+    </form>
 </body>
 </html>

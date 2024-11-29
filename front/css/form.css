@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif; 
+    height: 100vh; /* Hauteur de la fenêtre visible */
+    margin: 0; /* Supprime les marges par défaut */
+    background-color: #0E1725; /* Fond légèrement grisé */
+    color: white;
+}
+
+input{
+    color: black;
+}
+
+.grille-contenant{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.element{
+    grid-column: 2;
+    background-position: center;
+}

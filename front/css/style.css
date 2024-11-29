@@ -1,52 +1,37 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
-}
 body {
     font-family: Arial, sans-serif; 
     line-height: 1.6; 
-    color: rgb(22, 22, 22); 
-    margin: 0;
-    padding: 0;
-}
-header {
-    background-color: #16168a; 
     color: white; 
-    padding: 1rem; 
-    text-align: center; 
+    margin: 5;
+    padding: 5;
 }
-
 main {
-    background-image: url('../images/fond.jpg');
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed;
-    padding: 2rem; 
-}
-
-footer {
-    background-color: rgb(49, 49, 49); 
-    color: #fff; 
-    text-align: center; 
-    padding: 1rem;
-    margin-top: 2rem; 
-}
-.grille-contenant{
+    background-color: #0E1725;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(12,1fr);
     gap: 20px;
 }
+
+img {
+    width: 100%;
+    height: auto;
+    display: grid;
+}
+
+.ligne{
+    display:grid;
+    grid-column: span 12;
+}
 .element1{
-    grid-column: 1;
+    grid-column: 1/6;
     color: white;
 }
 
 .element2{
-    grid-column: 2;
+    grid-column: 7/12;
     color: white;
 }
+
 video {
     width: 100%;
     height: 100%;
