@@ -1,8 +1,8 @@
 body {
     font-family: Arial, sans-serif; 
-    height: 100vh; /* Hauteur de la fenêtre visible */
-    margin: 0; /* Supprime les marges par défaut */
-    background-color: #0E1725; /* Fond légèrement grisé */
+    height: 100vh;
+    margin: 0; 
+    background-color: #0E1725; 
     color: white;
 }
 

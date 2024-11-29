@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/form.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+    
+    <form action="../../backend/php/login.php" method="post" class="grille-contenant">
+        <h1 class="element">Connexion</h1>
+
+        <label for="email" class="element">email :</label>
+        <input type="email" id="email" name="email" class="element" placeholder="Votre email" required>
+
+        <label for="password" class="element">Mot de passe :</label>
+        <input type="password" id="password" name="password" class="element" placeholder="Votre mot de passe" required>
+
+        <button type="submit" class="element">Se connecter</button>
+    </form>
+</body>
+</html>

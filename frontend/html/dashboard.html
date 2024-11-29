@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/eu4_parodie/frontend/css/all.css">
+    <link rel="stylesheet" href="/eu4_parodie/frontend/css/dashboard.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Bienvenue, <span id="username"></span> !</h1>
+        <p>Voici vos informations :</p>
+        <ul>
+            <li><strong>Email :</strong> <span id="email"></span></li>
+        </ul>
+    
+        <a href="../../backend/php/logout.php">
+            <button>Déconnexion</button>
+        </a>
+    
+        <form action="../../backend/php/delete_account.php" method="POST" style="display: inline;">
+            <button type="submit" class="danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer votre compte ? Cette action est irréversible.')">
+                Supprimer le compte
+            </button>
+        </form>
+    </div>
+
+    <script>
+        fetch('../../backend/php/get_user_data.php')
+            .then(response => {
+                if (!response.ok) throw new Error("Failed to fetch user data");
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById('username').textContent = data.username;
+                document.getElementById('email').textContent = data.email;
+            })
+            .catch(error => {
+                console.error(error);
+                alert("Unable to load user data. Please log in again.");
+                window.location.href = '../frontend/html/connexion.html';
+            });
+    </script>
+</body>
+</html>

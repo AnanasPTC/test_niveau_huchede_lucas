@@ -17,19 +17,16 @@
             });
     </script>
     
-    <form class="grille-contenant">
+    <form action="../../backend/php/inscription.php" method="post" class="grille-contenant">
         <h1 class="element">Inscription</h1>
-        <!--username-->
         <label for="username" class="element">pseudo:</label>
         <input type="text" id="username" name="username" class="element" required>
         
-        <!--email-->
         <label for="email" class="element">email:</label>
-        <input type="text" id="email" name="email" class="element" required>
+        <input type="email" id="email" name="email" class="element" required>
 
-        <!--password-->
         <label for="password" class="element">mot de passe:</label>
-        <input type="text" id="password" name="password" class="element" required>
+        <input type="password" id="password" name="password" class="element" required>
 
         <button type="submit" class="element">S'inscrire</button>
     </form>
